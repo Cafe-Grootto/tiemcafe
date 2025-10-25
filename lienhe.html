@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ – GROOTTO CAFE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <img src="LOGO.jpg" alt="Logo GROOTTO">
+            <span>GROOTTO CAFE</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Trang chủ</a>
+            <a href="menu.html">Menu</a>
+            <a href="cart.html">Giỏ hàng (<span id="cartCount">0</span>)</a>
+            <a href="lienhe.html" class="active">Liên hệ</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+      <source src="https://cdn.pixabay.com/video/2022/07/11/124174-735772346_large.mp4" type="video/mp4">
+    </video>
+        <div class="overlay">
+            <h1>Liên hệ với GROOTTO CAFE</h1>
+            <p>Chúng tôi luôn sẵn sàng lắng nghe bạn ☕</p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <!-- THÔNG TIN -->
+            <div class="contact-info">
+                <h2>Thông tin liên hệ</h2>
+                <p><strong>📍 Địa chỉ:</strong> 25 Nguyễn Trãi, Quận 1, TP. Hồ Chí Minh</p>
+                <p><strong>📞 Hotline:</strong> 0901 123 456</p>
+                <p><strong>📧 Email:</strong> grootto.cafe@gmail.com</p>
+                <p><strong>🕒 Giờ mở cửa:</strong> 7:00 – 22:00 mỗi ngày</p>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+                    <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
+                    <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+                </div>
+
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.493446267785!2d106.68942837485425!3d10.774965259247938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f40be3f1cf7%3A0x3f6df519c0f58d60!2zMjUgTmd1eeG7hW4gVHLDrGksIFF14bqtbiAxLCBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1708869487001!5m2!1svi!2s"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <!-- FORM -->
+            <div class="contact-form">
+                <h2>Gửi lời nhắn cho chúng tôi</h2>
+                <form id="contactForm">
+                    <label for="name">Họ và tên</label>
+                    <input type="text" id="name" placeholder="Nhập tên của bạn" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Nhập email của bạn" required>
+
+                    <label for="message">Nội dung</label>
+                    <textarea id="message" placeholder="Viết lời nhắn của bạn..." rows="5" required></textarea>
+
+                    <button type="submit" class="btn">Gửi tin nhắn</button>
+                </form>
+                <p id="thankyou-msg">💌 Cảm ơn bạn! Chúng tôi sẽ phản hồi sớm nhất.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h3>GROOTTO CAFE</h3>
+                <p>Không gian của hương vị, nghệ thuật và cảm xúc.</p>
+                <p><strong>Địa chỉ:</strong> 25 Nguyễn Trãi, Quận 1, TP. Hồ Chí Minh</p>
+                <p><strong>Hotline:</strong> 0901 123 456</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Về chúng tôi</h3>
+                <a href="menu.html">Menu</a>
+                <a href="cart.html">Giỏ hàng</a>
+                <a href="lienhe.html">Liên hệ</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Theo dõi chúng tôi</h3>
+                <a href="https://www.facebook.com/">Facebook</a>
+                <a href="https://www.instagram.com/">Instagram</a>
+                <a href="https://www.tiktok.com/">TikTok</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 GROOTTO CAFE | Designed by Ha Huy Hoang Ha
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

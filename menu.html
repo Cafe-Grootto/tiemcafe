@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu – GROOTTO CAFE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <img src="LOGO.jpg" alt="Logo GROOTTO">
+            <span>GROOTTO CAFE</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Trang chủ</a>
+            <a href="menu.html">Menu</a>
+            <a href="cart.html">Giỏ hàng (<span id="cartCount">0</span>)</a>
+            <a href="lienhe.html">Liên hệ</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" style="height: 60vh;">
+        <video autoplay muted loop playsinline class="hero-video">
+      <source src="https://cdn.pixabay.com/video/2021/05/19/73773-555156968_large.mp4" type="video/mp4">
+    </video>
+        <div class="overlay">
+            <h1>Thực đơn GROOTTO</h1>
+            <p>Thức uống & bánh ngọt được yêu thích nhất</p>
+        </div>
+    </section>
+
+    <!-- MENU LIST -->
+    <section class="menu-section">
+        <h2>Cà phê</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <img src="https://baristaschool.vn/wp-content/uploads/2021/03/espressotieuchuanlagi.png" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Đậm vị, nguyên chất, chuẩn Ý</p>
+                <button class="add-to-cart" data-name="Espresso" data-price="45000">Thêm vào giỏ</button>
+            </div>
+            <div class="menu-card">
+                <img src="https://drive.gianhangvn.com/image/latte-macchiato-coffee-764828j12208.jpg" alt="Latte">
+                <h3>Latte</h3>
+                <p>Hòa quyện vị cà phê và sữa béo</p>
+                <button class="add-to-cart" data-name="Latte" data-price="55000">Thêm vào giỏ</button>
+            </div>
+            <div class="menu-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgsMGdxnEQOn8hv5iero0JfyIE1We80kpwDg&s" alt="Cold Brew">
+                <h3>Cold Brew</h3>
+                <p>Cà phê ủ lạnh, vị nhẹ và thanh</p>
+                <button class="add-to-cart" data-name="Cold Brew" data-price="60000">Thêm vào giỏ</button>
+            </div>
+        </div>
+
+        <h2>Trà & Đồ uống khác</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <img src="https://duyenlanh.net.vn/wp-content/uploads/2025/02/images-5.jpg" alt="Trà sen vàng">
+                <h3>Trà Sen Vàng</h3>
+                <p>Hương sen nhẹ, thanh mát và dễ chịu</p>
+                <button class="add-to-cart" data-name="Trà Sen Vàng" data-price="50000">Thêm vào giỏ</button>
+            </div>
+            <div class="menu-card">
+                <img src="https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-asm/blog/tra-hoa-cuc-cai-thien-giac-ngu.webp" " alt="Trà hoa cúc mật ong ">
+        <h3>Trà Hoa Cúc Mật Ong</h3>
+        <p>Giúp thư giãn, thanh lọc cơ thể</p>
+        <button class="add-to-cart " data-name="Trà Hoa Cúc Mật Ong " data-price="52000 ">Thêm vào giỏ</button>
+      </div>
+      <div class="menu-card ">
+        <img src="https://nineshield.com.vn/wp-content/uploads/2024/05/sinh-to-xoai-chuoi.jpg " alt="Sinh tố bơ ">
+        <h3>Sinh Tố Bơ</h3>
+        <p>Thơm béo, mát lạnh, bổ dưỡng</p>
+        <button class="add-to-cart " data-name="Sinh Tố Bơ " data-price="58000 ">Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <h2>Bánh ngọt</h2>
+    <div class="menu-grid ">
+      <div class="menu-card ">
+        <img src="https://www.lorca.vn/wp-content/uploads/2024/07/maxresdefault-16.jpg " alt="Tiramisu ">
+        <h3>Tiramisu</h3>
+        <p>Bánh ngọt Ý, vị cà phê và kem mascarpone</p>
+        <button class="add-to-cart " data-name="Tiramisu " data-price="65000 ">Thêm vào giỏ</button>
+      </div>
+      <div class="menu-card ">
+        <img src="https://brodardbakery.com/wp-content/uploads/2020/12/z5363277419648_1d7de7f29dfec0c412e46d5256511cca.jpg " alt="Bánh Chocolate ">
+        <h3>Bánh Chocolate</h3>
+        <p>Đậm vị cacao, mềm mịn tan chảy</p>
+        <button class="add-to-cart " data-name="Bánh Chocolate " data-price="62000 ">Thêm vào giỏ</button>
+      </div>
+      <div class="menu-card ">
+        <img src="https://www.allrecipes.com/thmb/jBAjBzZCHM8ISEy4ZZvg3zTWYz8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/276069homemade-cheesecakeKim4x3-eb1f8032a2e54eff99bc1ad0f9d3a8d4.jpg " alt="Cheesecake ">
+        <h3>Cheesecake</h3>
+        <p>Vị béo nhẹ, thơm mịn, cực kỳ hấp dẫn</p>
+        <button class="add-to-cart " data-name="Cheesecake " data-price="60000 ">Thêm vào giỏ</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer ">
+        <div class="footer-columns ">
+            <div class="footer-col ">
+                <h3>GROOTTO CAFE</h3>
+                <p>Không gian của hương vị, nghệ thuật và cảm xúc.</p>
+                <p><strong>Địa chỉ:</strong> 25 Nguyễn Trãi, Quận 1, TP. Hồ Chí Minh</p>
+                <p><strong>Hotline:</strong> 0901 123 456</p>
+            </div>
+
+            <div class="footer-col ">
+                <h3>Về chúng tôi</h3>
+                <a href="menu.html ">Menu</a>
+                <a href="cart.html ">Giỏ hàng</a>
+                <a href="lienhe.html ">Liên hệ</a>
+            </div>
+
+            <div class="footer-col ">
+                <h3>Theo dõi chúng tôi</h3>
+                <a href="https://www.facebook.com/ ">Facebook</a>
+                <a href="https://www.instagram.com/ ">Instagram</a>
+                <a href="https://www.tiktok.com/ ">TikTok</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom ">
+            © 2025 GROOTTO CAFE | Designed by Ha Huy Hoang Ha
+        </div>
+    </footer>
+
+  <!-- SCRIPT -->
+  <script src="script.js "></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROOTTO CAFE – Hương vị cà phê đích thực</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="LOGO.jpg">
+
+</head>
+
+<body>
+    <!-- 🌰 HEADER -->
+    <header class="header">
+        <div class="logo">
+            <img src="LOGO.jpg" alt="Logo GROOTTO">
+            <span>GROOTTO CAFE</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="active">Trang chủ</a>
+            <a href="menu.html">Menu</a>
+            <a href="cart.html">Giỏ hàng (<span id="cartCount">0</span>)</a>
+            <a href="lienhe.html">Liên hệ</a>
+        </nav>
+    </header>
+
+    <!-- ☕ HERO VIDEO -->
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+      <source src="https://cdn.pixabay.com/video/2023/03/06/153456-805688480_large.mp4" type="video/mp4">
+    </video>
+        <div class="overlay">
+            <h1>Thưởng thức hương vị cà phê nguyên bản</h1>
+            <p>Không chỉ là cà phê – đó là phong cách sống.</p>
+            <a href="menu.html" class="btn">Khám phá Menu</a>
+        </div>
+    </section>
+
+    <!-- 🌿 ABOUT -->
+    <section class="about">
+        <div class="about-text">
+            <h2>Câu chuyện GROOTTO</h2>
+            <p>
+                GROOTTO CAFE được tạo nên từ tình yêu với hương vị cà phê nguyên chất – nơi những hạt cà phê được rang thủ công, pha chế bằng cả tâm hồn. Mỗi tách cà phê là một hành trình của hương thơm, cảm xúc và nghệ thuật.
+            </p>
+        </div>
+        <div class="about-gallery">
+            <img src="https://hmcoffee.vn/wp-content/uploads/2021/09/cafe-nguyen-chat-tieng-anh-la-gi.jpg" alt="Cà phê nguyên chất">
+            <img src="https://dkdecor.vn/wp-content/uploads/2023/05/mau-quan-cafe-moc-8.jpg" alt="Không gian quán">
+            <img src="https://bizweb.dktcdn.net/thumb/grande/100/438/521/articles/ca-phe-pha-phin-phuc-long.jpg?v=1635414961157" alt="Nghệ thuật pha chế">
+        </div>
+    </section>
+
+    <!-- ☕ FEATURED MENU -->
+    <section class="menu-section">
+        <h2>Thức uống đặc trưng</h2>
+        <div class="menu-grid">
+            <div class="menu-card fade-in">
+                <img src="https://baristaschool.vn/wp-content/uploads/2021/03/espressotieuchuanlagi.png" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Đậm vị – nguyên chất – tinh tế, dành cho người yêu cà phê thật sự.</p>
+                <button class="btn add-to-cart" data-name="Espresso" data-price="45000">🧺 Thêm vào giỏ</button>
+            </div>
+
+            <div class="menu-card fade-in">
+                <img src="https://drive.gianhangvn.com/image/latte-macchiato-coffee-764828j12208.jpg" alt="Latte">
+                <h3>Latte</h3>
+                <p>Hòa quyện hoàn hảo giữa espresso và sữa tươi, nhẹ nhàng và ấm áp.</p>
+                <button class="btn add-to-cart" data-name="Latte" data-price="55000">🧺 Thêm vào giỏ</button>
+            </div>
+
+            <div class="menu-card fade-in">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgsMGdxnEQOn8hv5iero0JfyIE1We80kpwDg&s" alt="Cold Brew">
+                <h3>Cold Brew</h3>
+                <p>Cà phê ủ lạnh chậm, vị thanh nhẹ – mát lạnh và sảng khoái cho ngày dài.</p>
+                <button class="btn add-to-cart" data-name="Cold Brew" data-price="60000">🧺 Thêm vào giỏ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💌 NEWSLETTER -->
+    <section class="newsletter">
+        <h2>Đăng ký nhận ưu đãi</h2>
+        <p>Nhận thông tin về sự kiện và ưu đãi độc quyền từ GROOTTO CAFE.</p>
+        <form class="form">
+            <input type="email" placeholder="Nhập email của bạn" required>
+            <button type="submit" class="btn">Đăng ký</button>
+        </form>
+    </section>
+
+    <!-- 🌙 FOOTER -->
+    <footer class="footer">
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h3>GROOTTO CAFE</h3>
+                <p>Không gian của hương vị, nghệ thuật và cảm xúc.</p>
+                <p><strong>Địa chỉ:</strong> 25 Nguyễn Trãi, Quận 1, TP. Hồ Chí Minh</p>
+                <p><strong>Hotline:</strong> 0901 123 456</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Về chúng tôi</h3>
+                <a href="menu.html">Menu</a>
+                <a href="cart.html">Giỏ hàng</a>
+                <a href="lienhe.html">Liên hệ</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Theo dõi chúng tôi</h3>
+                <a href="https://www.facebook.com/">Facebook</a>
+                <a href="https://www.instagram.com/">Instagram</a>
+                <a href="https://www.tiktok.com/">TikTok</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 GROOTTO CAFE | Designed by Ha Huy Hoang Ha
+        </div>
+    </footer>
+
+
+    <!-- 📰 BẢNG TIN GÓC PHẢI -->
+    <div class="news-popup" id="newsPopup">
+        <div class="news-header">
+            <h3>☕ Coffee Stories</h3>
+            <button id="closeNews">✖</button>
+        </div>
+        <div class="news-content" id="newsContent"></div>
+    </div>
+
+    <!-- 📰 BẢNG TIN GÓC PHẢI -->
+    <div class="news-popup" id="newsPopup">
+        <div class="news-header">
+            <h3>☕ Coffee Stories</h3>
+            <button id="closeNews">✖</button>
+        </div>
+        <div class="news-content">
+            <div class="news-item">
+                <h4>✨ Ra mắt Blend No.9</h4>
+                <p>Hương vị caramel & chocolate rang tại chỗ — thử ngay hôm nay!</p>
+            </div>
+            <div class="news-item">
+                <h4>🎨 Workshop Latte Art</h4>
+                <p>Tham gia lớp học pha chế nghệ thuật vào Chủ Nhật hàng tuần.</p>
+            </div>
+            <div class="news-item">
+                <h4>🍰 Bánh Mùa Đông</h4>
+                <p>Tiramisu, Apple Pie nóng giòn — hợp gu cùng cappuccino nồng ấm.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📰 BẢNG TIN GÓC PHẢI -->
+    <div class="news-popup" id="newsPopup">
+        <div class="news-header">
+            <h3>☕ Coffee Stories</h3>
+            <button id="closeNews">✖</button>
+        </div>
+        <div class="news-content" id="newsContent"></div>
+    </div>
+
+    <!-- 🔘 NÚT HIỂN THỊ BẢNG TIN -->
+    <button class="news-toggle" id="openNews">📰 Tin mới</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
