@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh toán – GROOTTO CAFE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="checkout.css" />
+    <link rel="icon" type="image/png" href="LOGO.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <img src="LOGO.jpg" alt="Logo GROOTTO" />
+            <span>GROOTTO CAFE</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Trang chủ</a>
+            <a href="menu.html">Menu</a>
+            <a href="cart.html">Giỏ hàng (<span id="cartCount">0</span>)</a>
+            <a href="lienhe.html">Liên hệ</a>
+        </nav>
+    </header>
+
+    <!-- 💳 THANH TOÁN -->
+    <section class="checkout-section">
+        <h2>Thông tin thanh toán</h2>
+
+        <form id="checkoutForm" class="checkout-form">
+            <label for="fullname">Họ và tên</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên của bạn" required />
+
+            <label for="phone">Số điện thoại</label>
+            <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required />
+
+            <label for="address">Địa chỉ giao hàng</label>
+            <textarea id="address" name="address" placeholder="Số nhà, đường, phường/xã, quận/huyện..." required></textarea>
+
+            <h3>Đơn hàng của bạn</h3>
+            <div id="order-summary" class="order-summary"></div>
+
+            <button type="submit" class="btn">Xác nhận thanh toán</button>
+        </form>
+    </section>
+
+    <!-- 🎉 POPUP CẢM ƠN -->
+    <div class="thankyou-popup" id="popup">
+        <h3>🎉 Cảm ơn bạn!</h3>
+        <p>Đơn hàng của bạn đã được ghi nhận.</p>
+        <button onclick="closePopup()">Về Trang chủ</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h3>GROOTTO CAFE</h3>
+                <p>Không gian của hương vị, nghệ thuật và cảm xúc.</p>
+                <p><strong>Địa chỉ:</strong> 25 Nguyễn Trãi, Quận 1, TP. Hồ Chí Minh</p>
+                <p><strong>Hotline:</strong> 0901 123 456</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Về chúng tôi</h3>
+                <a href="menu.html">Menu</a>
+                <a href="cart.html">Giỏ hàng</a>
+                <a href="lienhe.html">Liên hệ</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Theo dõi chúng tôi</h3>
+                <a href="https://www.facebook.com/">Facebook</a>
+                <a href="https://www.instagram.com/">Instagram</a>
+                <a href="https://www.tiktok.com/">TikTok</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 GROOTTO CAFE | Designed by Ha Huy Hoang Ha
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
