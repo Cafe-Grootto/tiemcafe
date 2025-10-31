@@ -209,59 +209,102 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-// ============BANGTIN====================
-const popup = document.getElementById("newsPopup");
-const openBtn = document.getElementById("openNews");
-const closeBtn = document.getElementById("closeNews");
-const content = document.getElementById("newsContent");
+// ============ 📰 BẢNG TIN COFFEE STORIES (Slide chuyển tin) ============
+document.addEventListener("DOMContentLoaded", () => {
+  const openNews = document.getElementById("openNews");
+  const closeNews = document.getElementById("closeNews");
+  const newsPopup = document.getElementById("newsPopup");
+  const newsItems = document.querySelectorAll(".news-item");
+  const prevBtn = document.getElementById("prevNews");
+  const nextBtn = document.getElementById("nextNews");
 
-// 🎯 Danh sách tin ngẫu nhiên
-const newsItems = [{
-    title: "✨ Ra mắt Blend No.9",
-    text: "Công thức cà phê rang mới với hương caramel và chocolate. Dành riêng cho tháng này!"
-}, {
-    title: "🎨 Workshop Latte Art",
-    text: "Tham gia lớp pha chế nghệ thuật Latte Art – Chủ nhật hàng tuần tại GROOTTO Studio."
-}, {
-    title: "🍰 Bánh Mùa Đông",
-    text: "Thưởng thức tiramisu và apple pie nóng giòn, kết hợp cappuccino ấm nồng."
-}];
+  let currentIndex = 0;
+  let autoSlide;
 
-// 🧠 Hiển thị ngẫu nhiên 1 tin
-function showRandomNews() {
-    const random = newsItems[Math.floor(Math.random() * newsItems.length)];
-    content.innerHTML = `
-      <div class="news-item">
-        <h4>${random.title}</h4>
-        <p>${random.text}</p>
-      </div>
-    `;
-}
+  // 🌟 Hiển thị tin hiện tại
+  function showNews(index) {
+    newsItems.forEach((item, i) => {
+      item.classList.remove("active", "exit-left");
+      if (i === index) {
+        item.classList.add("active");
+      } else if (i < index) {
+        item.classList.add("exit-left");
+      }
+    });
+  }
 
-// 🚀 Khi tải trang
-window.addEventListener("load", () => {
-    showRandomNews();
-    popup.classList.add("show");
-    openBtn.style.display = "none";
+  // 👉 Nút qua tin mới
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % newsItems.length;
+    showNews(currentIndex);
+    resetAutoSlide();
+  });
 
-    // ⏰ Tự ẩn sau 10 giây
+  // 👈 Nút quay lại tin trước
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + newsItems.length) % newsItems.length;
+    showNews(currentIndex);
+    resetAutoSlide();
+  });
+
+  // 📰 Mở popup
+  openNews.addEventListener("click", () => {
+    newsPopup.classList.add("show");
+    openNews.style.display = "none";
+    showNews(currentIndex);
+    startAutoSlide();
+  });
+
+  // ❌ Đóng popup
+  closeNews.addEventListener("click", () => {
+    newsPopup.classList.remove("show");
+    openNews.style.display = "block";
+    stopAutoSlide();
+  });
+
+  // ⏱️ Tự động chuyển tin mỗi 5 giây
+  function startAutoSlide() {
+    stopAutoSlide();
+    autoSlide = setInterval(() => {
+      currentIndex = (currentIndex + 1) % newsItems.length;
+      showNews(currentIndex);
+    }, 5000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+  }
+
+  function resetAutoSlide() {
+    stopAutoSlide();
+    startAutoSlide();
+  }
+
+  // 👉 Đóng khi click ngoài popup
+  document.addEventListener("click", (e) => {
+    if (!newsPopup.contains(e.target) && !openNews.contains(e.target)) {
+      newsPopup.classList.remove("show");
+      openNews.style.display = "block";
+      stopAutoSlide();
+    }
+  });
+
+  // 🕒 Hiện popup sau 5 giây khi mở trang
+  setTimeout(() => {
+    newsPopup.classList.add("show");
+    openNews.style.display = "none";
+    showNews(currentIndex);
+    startAutoSlide();
+
+    // ⏰ Ẩn lại sau 10 giây
     setTimeout(() => {
-        popup.classList.remove("show");
-        openBtn.style.display = "block";
+      newsPopup.classList.remove("show");
+      openNews.style.display = "block";
+      stopAutoSlide();
     }, 10000);
+  }, 5000);
 });
 
-// 🖱️ Mở và đóng thủ công
-openBtn.addEventListener("click", () => {
-    showRandomNews();
-    popup.classList.add("show");
-    openBtn.style.display = "none";
-});
-
-closeBtn.addEventListener("click", () => {
-    popup.classList.remove("show");
-    openBtn.style.display = "block";
-});
 //======LIENHE==========
 const form = document.getElementById('contactForm');
 const thankMsg = document.getElementById('thankyou-msg');
